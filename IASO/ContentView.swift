@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+        TabView(selection: .constant(1)) {
             Text("Hello").tabItem { Text("Explore")
             }.tag(1)
             Text("Daily Check").tabItem {
