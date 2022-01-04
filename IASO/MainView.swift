@@ -9,9 +9,15 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView{
-            ContentView()
-            DailyCheck()
+        TabView {
+            ContentView().tabItem { Label("Explore", systemImage: "list.dash")
+            }
+            FeaturedView().tabItem {
+                Label("Featured", systemImage: "pencil.circle.fill")
+            }
+            ProfileView().tabItem {
+                Label("Profile", systemImage: "square")
+            }
         }
     }
 }
