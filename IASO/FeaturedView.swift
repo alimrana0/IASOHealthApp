@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct FeaturedView: View {
+    @State var name = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TextField(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/, text: $name)
     }
 }
 

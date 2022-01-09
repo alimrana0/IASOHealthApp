@@ -7,9 +7,22 @@
 
 import SwiftUI
 
+// View when starting up app to prompt daily check
 struct DailyCheckView: View {
+    @State private var swap = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if !swap {
+            VStack {
+                DailyCheckEditor()
+                Button("Skip Daily Wellness...") {
+                        swap = true
+                }
+            }
+        }
+        else {
+            MainView()
+        }
     }
 }
 

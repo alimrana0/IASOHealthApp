@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Main view that contains the three main tabs of the app
 struct MainView: View {
     var body: some View {
         TabView {
