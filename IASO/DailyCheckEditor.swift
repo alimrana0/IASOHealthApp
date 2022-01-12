@@ -28,9 +28,11 @@ struct MultipleSelectionRow: View {
 
 // View for entering info in daily check
 struct DailyCheckEditor: View {
-    @State var description: String = ""
-    @State var rating: Int = 0
-    @State var curMood: Array<String> = []
+    var dailyCheck: DailyCheckObject
+    
+    @State private var text: String = ""
+    @State private var rating: Int = 0
+    @State private var curMood: Array<String> = []
     
     let moods =  ["Happy", "Sad", "Angry"]
     
@@ -38,7 +40,7 @@ struct DailyCheckEditor: View {
         NavigationView {
             Form {
                 Section(header: Text("How are you?")) {
-                    TextEditor(text: $description)
+                    TextEditor(text: $text)
                 }
                 Section(header: Text("Rate Mood")) {
                     Picker("Current Mood", selection: $rating) {
@@ -67,6 +69,6 @@ struct DailyCheckEditor: View {
 
 struct DailyCheckEditor_Previews: PreviewProvider {
     static var previews: some View {
-        DailyCheckEditor()
+        DailyCheckEditor(dailyCheck: DailyCheckObject(text: "", rating: 0, curMood: []))
     }
 }
