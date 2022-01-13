@@ -13,7 +13,7 @@ class DailyCheckObject : Codable {
     var rating: Int
     var curMood: Array<String>
     
-    init(text: String, rating: Int, curMood: Array<String>) {
+    init(text: String, rating: Int, curMood: [String]) {
         self.text = text
         self.rating = rating
         self.curMood = curMood

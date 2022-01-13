@@ -24,9 +24,12 @@ class DataManager {
     }
     
     //Saves new Daily Check
-    func save(text: String) {
+    func save(date: Date, text: String, rating: Int, curMood: [String]) {
         let entity = DailyCheckEntity(context: persistentContainer.viewContext)
+        entity.date = date
         entity.text = text
+        entity.rating = Int64(rating)
+        entity.curMood = curMood
         
         do {
             try persistentContainer.viewContext.save()
@@ -45,6 +48,21 @@ class DataManager {
         }
         catch {
             return []
+        }
+    }
+    
+    //Clears Core Data
+    func resetData() {
+        for dailyCheck in loadAll() {
+            persistentContainer.viewContext.delete(dailyCheck)
+        }
+        
+        do {
+            try persistentContainer.viewContext.save()
+        }
+        catch {
+            persistentContainer.viewContext.rollback()
+            print("Failed to Save Context \(error)")
         }
     }
 }
