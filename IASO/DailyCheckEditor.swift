@@ -11,8 +11,6 @@ import SwiftUI
 struct DailyCheckEditor: View {
     let dataM: DataManager
     
-    var dailyCheck: DailyCheckObject
-    
     @State private var text: String = ""
     @State private var rating: Int = 0
     @State private var curMood: Array<String> = []
@@ -47,15 +45,6 @@ struct DailyCheckEditor: View {
                 Button("Submit") {
                     dataM.save(date: Date(), text: text, rating: rating, curMood: curMood)
                 }
-                Button("Load") {
-                    let dateFormatter = DateFormatter()
-                    
-                    //text = dateFormatter.string(from: dataM.loadAll()[0].date!)
-                    text = dataM.loadAll()[0].date!.description
-                    //text = dataM.loadAll()[0].text!
-                    rating = Int(dataM.loadAll()[0].rating)
-                    curMood = dataM.loadAll()[0].curMood!
-                }
                 Button("Reset") {
                     dataM.resetData()
                 }
@@ -86,6 +75,6 @@ struct MultipleSelectionRow: View {
 
 struct DailyCheckEditor_Previews: PreviewProvider {
     static var previews: some View {
-        DailyCheckEditor(dataM: DataManager(), dailyCheck: DailyCheckObject(text: "", rating: 0, curMood: []))
+        DailyCheckEditor(dataM: DataManager())
     }
 }

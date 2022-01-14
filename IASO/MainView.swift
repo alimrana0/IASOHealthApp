@@ -16,7 +16,7 @@ struct MainView: View {
             FeaturedView().tabItem {
                 Label("Featured", systemImage: "pencil.circle.fill")
             }
-            ProfileView().tabItem {
+            ProfileView(dataM: DataManager()).tabItem {
                 Label("Profile", systemImage: "square")
             }
         }

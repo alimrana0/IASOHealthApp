@@ -14,7 +14,7 @@ struct DailyCheckView: View {
     var body: some View {
         if !swap {
             VStack {
-                DailyCheckEditor(dataM: DataManager(), dailyCheck: DailyCheckObject(text: "", rating: 0, curMood: []))
+                DailyCheckEditor(dataM: DataManager())
                 Button("Skip Daily Wellness...") {
                         swap = true
                 }

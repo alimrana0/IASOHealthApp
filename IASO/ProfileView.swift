@@ -7,18 +7,26 @@
 
 import SwiftUI
 
+// View for the profile tab
 struct ProfileView: View {
-    @State var counter = 0
+    let dataM: DataManager
     
     var body: some View {
-        Button("Counter: \(counter)") {
-            counter += 1
+        NavigationView {
+            List {
+                ForEach(dataM.loadAll(), id: \.self) { dailyCheck in
+                    NavigationLink(destination: DetailedEntryView(dailyCheck: dailyCheck)) {
+                        ProfileDailyView(dailyCheck: dailyCheck)
+                    }
+                }
+            }
+            .navigationTitle("Profile")
         }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(dataM: DataManager())
     }
 }
