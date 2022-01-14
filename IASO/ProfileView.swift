@@ -14,7 +14,7 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(dataM.loadAll(), id: \.self) { dailyCheck in
+                ForEach(dataM.loadAll().reversed(), id: \.self) { dailyCheck in
                     NavigationLink(destination: DetailedEntryView(dailyCheck: dailyCheck)) {
                         ProfileDailyView(dailyCheck: dailyCheck)
                     }
