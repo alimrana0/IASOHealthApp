@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A0330532792269000B195F9 /* DailyCheckView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0330522792269000B195F9 /* DailyCheckView-ViewModel.swift */; };
 		9A0603722784EE9800FEF46C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0603712784EE9800FEF46C /* ProfileView.swift */; };
 		9A06037D2784F19D00FEF46C /* FeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06037C2784F19D00FEF46C /* FeaturedView.swift */; };
 		9A474D11278554E600FE510E /* DailyCheckEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A474D10278554E600FE510E /* DailyCheckEditor.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A0330522792269000B195F9 /* DailyCheckView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyCheckView-ViewModel.swift"; sourceTree = "<group>"; };
 		9A0603712784EE9800FEF46C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9A06037C2784F19D00FEF46C /* FeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
 		9A474D10278554E600FE510E /* DailyCheckEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCheckEditor.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -116,6 +118,7 @@
 				9AC498BB2783D20D00E2F319 /* IASOApp.swift */,
 				9A5C1016278E36EA00779CBA /* DataManager.swift */,
 				9AC498E92783E10100E2F319 /* DailyCheckView.swift */,
+				9A0330522792269000B195F9 /* DailyCheckView-ViewModel.swift */,
 				9A474D10278554E600FE510E /* DailyCheckEditor.swift */,
 				9A625B042790F87500E2E96A /* DetailedEntryView.swift */,
 				9AC498F62783E70300E2F319 /* MainView.swift */,
@@ -296,6 +299,7 @@
 				9AC498BE2783D20D00E2F319 /* ContentView.swift in Sources */,
 				9A06037D2784F19D00FEF46C /* FeaturedView.swift in Sources */,
 				9AC498BC2783D20D00E2F319 /* IASOApp.swift in Sources */,
+				9A0330532792269000B195F9 /* DailyCheckView-ViewModel.swift in Sources */,
 				9A625B052790F87500E2E96A /* DetailedEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

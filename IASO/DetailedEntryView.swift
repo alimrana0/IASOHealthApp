@@ -12,7 +12,6 @@ struct DetailedEntryView: View {
     let dailyCheck: DailyCheckEntity
     
     var body: some View {
-        NavigationView {
             Form {
                 Section(header: Text("How you were...")) {
                     Text(dailyCheck.text!)
@@ -26,8 +25,8 @@ struct DetailedEntryView: View {
                     }
                 }
             }
-        }
-        .navigationTitle("Entry: " + dateFormat(date: dailyCheck.date!))
+            .edgesIgnoringSafeArea(.top)
+            .navigationBarTitle("Entry: " + dateFormat(date: dailyCheck.date!))
     }
     
     // Function to convert date to string

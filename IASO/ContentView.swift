@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// View for all content for user
 struct ContentView: View {
     
     var body: some View {

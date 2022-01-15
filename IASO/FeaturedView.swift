@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+// View for only featured user content
 struct FeaturedView: View {
     @State var name = ""
     
     var body: some View {
-        TextField(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/, text: $name)
+        NavigationView {
+            List {
+                Text("article 1")
+                Text("article 2")
+                Text("article 3")
+            }
+            .navigationTitle("Featured...")
+        }
     }
 }
 

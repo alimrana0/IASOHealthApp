@@ -13,6 +13,7 @@ class DataManager {
     
     let persistentContainer: NSPersistentContainer
     
+    // Initialization
     init() {
         persistentContainer = NSPersistentContainer(name: "DataModel")
         persistentContainer.loadPersistentStores {

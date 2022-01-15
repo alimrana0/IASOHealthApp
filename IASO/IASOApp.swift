@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Runs app
 @main
 struct IASOApp: App {
     var body: some Scene {
